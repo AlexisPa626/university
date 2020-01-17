@@ -16,13 +16,13 @@
     }
 
   .main{
-    height: 25rem;
+    height: 30rem;
     background: url(images/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     /* background-size: cover; */
     position: relative;
-
+    padding-top: 4em;
 
   }
   .overlay{
@@ -34,7 +34,6 @@
   }
   .show{
     position: relative;
-    z-index: 100;
   }
   .teacher{
     font-size: 1.2em;
@@ -50,43 +49,72 @@
     margin-top: .1em;
   }
 
+  .menu-open {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background: url(./icons/icon.svg#menu_open);
+  }
+  @media screen and (min-width: 1024px) {
+    .menu-open {
+      display: none;
+    }
+  }
+  .menu-close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em .8em;
+  }
+  @media screen and (min-width: 1024px) {
+    .menu-close {
+      display: none; }
+    }
+    .menu-close__icon {
+      cursor: pointer;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: url(./icons/icon.svg#menu_close);
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .arrow-icon {
+      background: url(./icons/icon.svg#arrow);
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      background-color: #ccc;
+      background-repeat: no-repeat; }
+
+  /* .menu-left__nav{
+    transform: translateX(-100%);
+  } */
+
   </style>
 
 </head>
 <body>
-
-
-  <div class="container--expanded container main">
-    <!-- <div class="overlay"></div> -->
-    <div class="col-sm-12 jc--center ai--center">
-      <div class="flex--column">
-        <img src="./images/unac2.png" alt="">
-        <h1  class="text--bold text--large  show title">Cálculo 3</h1>
-      </div>
-    </div>
-    <div class="col-sm-12 jc--end">
-      <p class=" show teacher">Profesor:Manuel Alcántara Ramírez</p>
-    </div>
-  </div>
-
 
     <div class="menu-left">
       <div class="menu-open" data-target="#navigation" data-toggle="menu-left">
       </div>
 
       <nav class="menu-left__nav" id="navigation">
+
         <ul class="menu-left__list--large">
           <li class="menu-left__item">
             <a>Integrantes</a>
             <ul class="menu-left__submenu">
               <li class="menu-left__subitem">
                 <div class="flex">
-                  <a href="#" class="menu-left__link" class="menu-left__link">Edwin Alexis Pando</a>
+                  <a href="https://web.facebook.com/edwin.pandoarcondo" class="menu-left__link" class="menu-left__link">Edwin Alexis Pando</a>
                 </div>
               </li>
               <li class="menu-left__subitem">
                 <div class="flex">
-                  <a href="#" class="menu-left__link" class="menu-left__link">Anthony Yataco Chamorro </a>
+                  <a href="#" class="menu-left__link" class="menu-left__link">Anthony Yataco Chamorro</a>
                 </div>
               </li>
             </ul>
@@ -106,8 +134,64 @@
           </li>
         </ul>
 
+        <ul class="menu-left__list--small">
+          <div class="menu-close" data-toggle="menu-left__close">
+            <div class="menu-close__icon"></div>
+          </div>
+          <li class="menu-left__item">
+            <a href="#" class="menu-left__link">
+              Integrantes<span class="arrow-icon" data-target="menu-left__submenu" data-toggle="#menu_integrantes"></span>
+            </a>
+          </li>
+          <li class="menu-left__item">
+            <a href="#" class="menu-left__link">Integrales Dobles
+              <span class="arrow-icon" data-target="menu-left__submenu" data-toggle="#menu_productos"></span>
+            </a>
+          </li>
+          <li class="menu-left__item">
+            <a href="#" class="menu-left__link">Integrales Triples</a>
+          </li>
+          <li class="menu-left__item">
+            <a href="#" class="menu-left__link">Proyecto</a>
+          </li>
+        </ul>
+
+        <ul class="menu-left__submenu" id="menu_integrantes">
+          <div class="menu-close" data-toggle="menu-left__close">
+            <div class="menu-close__icon"></div>
+          </div>
+          <li class="menu-left__subitem">
+            <a href="https://web.facebook.com/edwin.pandoarcondo" class="menu-left__link">Edwin Alexis Pando
+              <span class="arrow-icon"></span>
+            </a>
+          </li>
+          <li class="menu-left__subitem">
+            <a href="#" class="menu-left__link">
+              Anthony Yataco Chamorro
+             <span class="arrow-icon" data-target="menu-left__submenu" data-toggle="#menu_colchones"></span>
+            </a>
+          </li>
+        </ul>
+
       </nav>
     </div>
+
+    <div class="container--expanded container main">
+      <!-- <div class="overlay"></div> -->
+      <div class="col-sm-12 jc--center ai--center">
+        <div class="flex--column">
+          <img src="./images/unac2.png" alt="">
+          <h1  class="text--bold text--large  show title">Cálculo 3</h1>
+        </div>
+      </div>
+      <div class="col-sm-12 jc--end">
+        <p class=" show teacher">Profesor:Manuel Alcántara Ramírez</p>
+      </div>
+    </div>
+
+  <script type="text/javascript" src="js/main.js">
+
+  </script>
 
 </body>
 </html>
