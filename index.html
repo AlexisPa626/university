@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+
+    .nav{
+      width: 20vw;
+      height: 100vh;
+      background: red;
+    }
+
+  .main{
+    height: 25rem;
+    background: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    position: relative;
+
+
+  }
+  .overlay{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .4;
+  }
+  .show{
+    position: relative;
+    z-index: 100;
+  }
+  .teacher{
+    font-size: 1.2em;
+    margin-top: 3.5em;
+    margin-right: 1em;
+    color: #1164aa;
+  }
+  .title{
+    /* margin-top: .8em; */
+    color: #1164aa;
+    font-size: 5em;
+    margin-left: 1.2em;
+    margin-top: .1em;
+  }
+
+  </style>
+
+</head>
+<body>
+
+
+  <div class="container--expanded container main">
+    <!-- <div class="overlay"></div> -->
+    <div class="col-sm-12 jc--center ai--center">
+      <div class="flex--column">
+        <img src="./images/unac2.png" alt="">
+        <h1  class="text--bold text--large  show title">Cálculo 3</h1>
+      </div>
+    </div>
+    <div class="col-sm-12 jc--end">
+      <p class=" show teacher">Profesor:Manuel Alcántara Ramírez</p>
+    </div>
+  </div>
+
+
+    <div class="menu-left">
+      <div class="menu-open" data-target="#navigation" data-toggle="menu-left">
+      </div>
+
+      <nav class="menu-left__nav" id="navigation">
+        <ul class="menu-left__list--large">
+          <li class="menu-left__item">
+            <a>Integrantes</a>
+            <ul class="menu-left__submenu">
+              <li class="menu-left__subitem">
+                <div class="flex">
+                  <a href="#" class="menu-left__link" class="menu-left__link">Edwin Alexis Pando</a>
+                </div>
+              </li>
+              <li class="menu-left__subitem">
+                <div class="flex">
+                  <a href="#" class="menu-left__link" class="menu-left__link">Anthony Yataco Chamorro </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-left__item">
+            <a>Integrales Dobles</a>
+          </li>
+
+
+          <li class="menu-left__item">
+            <a>Integrales Triples</a>
+          </li>
+
+          <li class="menu-left__item">
+            <a>Proyecto</a>
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+
+</body>
+</html>
